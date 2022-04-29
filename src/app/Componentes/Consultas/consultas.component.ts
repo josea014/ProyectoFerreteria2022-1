@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./consultas.component.css']
 })
 export class ConsultaComponent {
-  title = 'GestionF-Consulta2022';
+  
 }

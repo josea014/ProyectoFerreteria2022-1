@@ -1,47 +1,68 @@
-
 <div class="container">
-  <div class="card text-center">
-    <div class="card-header">
-      <b>DATOS DEL CLIENTE</b>
-      <style type="text/css">
-        textarea{
-          resize: none;
-        }
-      </style>
+  <div class="row">
+    <div class="card mt-5">
+      <div class="card-header">
+        <h1>DATOS DEL CLIENTE</h1>
+
+      </div>
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col form-group">
+
+            <label>Numero del documento</label>
+            <input type="text" class="form-control" placeholder="Numero del documento">
+          </div>
+          <div class="col form-group">
+
+            <label>nombre</label>
+            <input type="text" class="form-control" placeholder="Nombre Completo">
+
+          </div>
+        </div>
+
+
+        <div class="row g-3">
+          <div class="col form-group">
+            <label>Telefono</label>
+            <input type="tel" class="form-control" placeholder="Telefono#">
+          </div>
+          <div class="col form-group">
+            <label>Celular</label>
+            <input type="tel" class="form-control" placeholder="Numero Celular">
+
+          </div>
+        </div>
+
+<div class="row g-3 mt-2">
+  <div class="col form-group">
+    <label>Nombre del Municipio</label>
+    <input type="text" class="form-control" placeholder="Municipio">
+    
+      </div>
+      <div class="col form-group">
+        
+        
+        <label>Direccion</label>
+        <input type="text" class="form-control" placeholder="Nombre ">
+        
+      </div>
     </div>
-    <div class="card-body">
-       <br>
-      <label>Numero del documento</label>
-      <input type="text" placeholder="Numero del documento">
-      <br>
-      <br>
-      <label>nombre</label>
-      <input type="text" placeholder="Nombre Completo">
-      <br>
-      <br>
-      <label>Telefono</label>
-      <input type="text" placeholder="#">
-      <br>
-      <br>
-      <label>Celular</label>
-      <input type="text" placeholder="Numero Celular">
-      <br>
-      <br>
-      <label>Nombre del Municipio</label>
-      <input type="text" placeholder="Municipio">
-      <br>
-      <br>
-      <label>Direccion</label>
-      <input type="text" placeholder="Nombre ">
-      <br>
-      <br>
-      <label>Nombre del Departamento</label>
-      <input type="text" placeholder="Nombre del Departamento">
-      <br>
-      <br>
-      <button class="btn btn-primary">Registrar</button>
-      <br>
-      <br>
+
+<div class="row g-3 mt-2">
+  <div class="col-4 form-group">
+    <label>Nombre del Departamento</label>
+    <input type="text" class="form-control" placeholder="Nombre del Departamento">
+    
+      </div>
+    </div>
+
+<div class="d-grid col-3 mx-auto">
+
+  <button mat-raised-button color="primary" class=" mt-3">Registrar</button>
+</div>
+
+
+      </div>
     </div>
   </div>
-  </div>
+</div>

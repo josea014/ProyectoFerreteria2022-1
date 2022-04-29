@@ -1,75 +1,84 @@
 <div class="container">
-  <h1>PERFIL</h1>
+
   <div class="row">
-    <div class="col-10 mt-5">
-      <form action="">
+    <div class=" card col-10 mt-5 m-auto">
+
+      <h1 class="card-header">PERFIL</h1>
+      <div class="card-body">
+
+        <form action="">
 
 
-        <div class="row g-3">
-          <div class="col form-group">
-            <label for="Nombre" class="label">Nombre</label>
-            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+          <div class="row g-3">
+            <mat-form-field class="col form-group">
+
+              <mat-label for="Nombre" class="label">Nombre</mat-label>
+              <input matInput placeholder="nombre">
+            </mat-form-field>
+            <mat-form-field class="col">
+              <mat-label for="empresa" class="label">Número de Documento</mat-label>
+              <input matInput type="number" placeholder="99958421" aria-label="total">
+            </mat-form-field>
           </div>
-          <div class="col">
-            <label for="empresa" class="label">Número de Documento</label>
-            <input type="number" class="form-control" placeholder="99958421" aria-label="total">
-          </div>
-        </div>
 
-        <div class="row g-3">
-          <div class="col-5">
-            <label for="usuario" class="label">Usuario</label>
-            <input type="text" class="form-control" placeholder="pepito" aria-label="pepito">
+          <div class="row g-3">
+            <mat-form-field class="col-5">
+              <mat-label for="usuario" class="label">Usuario</mat-label>
+              <input matInput type="text"  placeholder="pepito" >
+            </mat-form-field>
+            <mat-form-field class="col">
+              <mat-label for="contraseña" class="label">Contraseña</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'"  >
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
           </div>
-          <div class="col">
-            <label for="contraseña" class="label">Contraseña</label>
-            <input type="password" class="form-control" aria-label="password">
+          <div class="row g-3">
+            <mat-form-field class="col">
+              <mat-label for="telefono">Teléfono </mat-label>
+              <input matInput type="tel"  placeholder="0180003517810">
+            </mat-form-field>
+            <mat-form-field class="col">
+              <mat-label for="celular">Celular </mat-label>
+              <input matInput type="tel" class="form-control" placeholder="--- --- ----">
+            </mat-form-field>
           </div>
-        </div>
-        <div class="row g-3">
-          <div class="col">
-            <label for="telefono">Teléfono </label>
-            <input type="tel" class="form-control" placeholder="0180003517810">
+          <div class="row g-3">
+            <mat-form-field class="col">
+              <mat-label for="nombreMunicipio" class="label">Nombre de Municipio</mat-label>
+              <input matInput placeholder="Municipio" aria-label="nombreMunicipio">
+            </mat-form-field>
+            <mat-form-field class="col">
+              <mat-label for="departamento" class="label">Departamento</mat-label>
+              <input matInput type="text" s>
+            </mat-form-field>
           </div>
-          <div class="col">
-            <label for="celular">Celular </label>
-            <input type="tel" class="form-control" placeholder="--- --- ----">
-          </div>
-        </div>
-        <div class="row g-3">
-          <div class="col">
-            <label for="nombreMunicipio" class="label">Nombre de Municipio</label>
-            <input type="text" class="form-control" placeholder="Municipio" aria-label="nombreMunicipio">
-          </div>
-          <div class="col">
-            <label for="departamento" class="label">Departamento</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
 
-        <div class="row g-3">
+          <div class="row g-3">
 
-          <div class="col">
-            <label for="direccion" class="label">Dirección</label>
-            <input type="text" class="form-control" placeholder="calle 123 # 26" aria-label="direccion">
+            <mat-form-field class="col">
+              <mat-label for="direccion" class="label">Dirección</mat-label>
+              <input matInput type="text"  placeholder="calle 123 # 26" aria-label="direccion">
 
+            </mat-form-field>
+            <mat-form-field class="col">
+             
+                <mat-label for="fehcaNacimiento" class="label">Fecha Nacimiento</mat-label>
+                <input matInput type="date"  aria-label="fecha">
+             
+            </mat-form-field>
           </div>
-          <div class="col">
-            <div class="col">
-              <label for="fehcaNacimiento" class="label">Fecha Nacimiento</label>
-              <input type="date" class="form-control"  aria-label="fecha">
-            </div>
-          </div>
-        </div>
 
 
 
 
-        <div class="d-grid  col-2 mx-auto">
-          <button type="button" class="btn btn-secondary m-2 center">Guardar</button>
-        </div>
+          <div class="d-grid  col-3 mx-auto">
+            <button  mat-raised-button color="primary" class="m-2 center">Guardar</button>
+          </div>
 
-      </form>
+        </form>
+      </div>
 
     </div>
 
