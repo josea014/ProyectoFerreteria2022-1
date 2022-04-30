@@ -22,7 +22,8 @@ import { PerfilComponent } from './Componentes/perfil/perfil.component';
 import { ProductoComponent } from './Componentes/producto/producto.component';
 import { VentasComponent } from './Componentes/ventas/ventas.component';
 import { ClienteComponent } from './Componentes/cliente/cliente.component';
-
+import { ConsultaComponent } from './Componentes/consulta/consulta.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ClienteComponent } from './Componentes/cliente/cliente.component';
     PerfilComponent,
     ProductoComponent,
     VentasComponent,
-    ClienteComponent
+    ClienteComponent,
+    ConsultaComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,9 @@ import { ClienteComponent } from './Componentes/cliente/cliente.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
