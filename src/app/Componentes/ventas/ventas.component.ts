@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class VentasComponent implements OnInit {
 
   disabled: boolean;
+  cantidades: number[];
   constructor() {
     this.disabled = true;
+    this.cantidades = [1,2,3,4,5,8,4,6,6,9,10,12]
   }
   ngOnInit(): void {
   }

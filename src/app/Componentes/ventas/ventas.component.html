@@ -7,69 +7,67 @@
 
 
           <div class="row g-3">
-            <div class="col form-group">
-              <label for="emrpesa" class="label">Empresa</label>
-              <input type="text" class="form-control" placeholder="empresa" aria-label="Empresa">
-            </div>
-            <div class="col">
-              <label for="empresa" class="label">Factura</label>
-              <input type="text" class="form-control" [disabled] ="disabled" aria-label="Empresa">
-            </div>
+            <mat-form-field class="col form-group">
+              <mat-label for="emrpesa" class="label">Empresa</mat-label>
+              <input matInput type="text"  placeholder="empresa" aria-label="Empresa">
+            </mat-form-field>
+            <mat-form-field class="col">
+              <mat-label for="empresa" class="label">Factura</mat-label>
+              <input matInput type="text" class="form-control" [disabled] ="disabled" aria-label="Empresa">
+            </mat-form-field>
           </div>
 
           <div class="row g-3">
-            <div class="col">
-              <label for="nombreProduto" class="label">Nombre del producto</label>
-              <input type="text" class="form-control" placeholder="Nombre del producto" aria-label="First name">
-            </div>
-            <div class="col">
-              <label for="datosDelCliente" class="label">Datos del cliente</label>
-              <input type="text" class="form-control" placeholder="nombre" aria-label="datos del cliente">
-            </div>
+            <mat-form-field class="col">
+              <mat-label for="nombreProduto" class="label">Nombre del producto</mat-label>
+              <input matInput type="text" class="form-control" placeholder="Nombre del producto" aria-label="First name">
+            </mat-form-field>
+            <mat-form-field class="col">
+              <mat-label for="datosDelCliente" class="label">Datos del cliente</mat-label>
+              <input matInput type="text" class="form-control" placeholder="nombre" aria-label="datos del cliente">
+            </mat-form-field>
+          </div>
+          <div class="row g-3">
+            <mat-form-field class="col">
+              <mat-label for="descripcion">Descripcion</mat-label>
+              <textarea matInput id="descripcion" name="descripcion" row="2" class="form-control"></textarea>
+            </mat-form-field>
+            <mat-form-field class="col">
+              <mat-label for="cantidad">Cantidad</mat-label>
+              <mat-select  aria-label="Default select example">
+                <mat-option *ngFor="let cantidad of cantidades" [value]="cantidad">{{cantidad}}</mat-option>
+               
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="row g-3">
+            <mat-form-field class="col">
+              <mat-label for="codigoDeBarra" class="label">Codigo de barras</mat-label>
+              <input matInput type="text" class="form-control" placeholder="codifo de barras" aria-label="codigo de barras">
+            </mat-form-field>
+          </div>
+          <div class="row g-3">
+            <mat-form-field class="col">
+              <mat-label for="fecha" class="label">Fecha</mat-label>
+              <input matInput type="date" class="form-control">
+            </mat-form-field>
+            <mat-form-field class="col">
+              <mat-label for="descuento" class="label">Descuento</mat-label>
+              <input matInput type="number" class="form-control" placeholder="Descuento" aria-label="descuento">
+            </mat-form-field>
           </div>
           <div class="row g-3">
             <div class="col">
-              <label for="descripcion">Descripcion</label>
-              <textarea id="descripcion" name="descripcion" row="2" class="form-control"></textarea>
+              <mat-form-field class="col">
+                <mat-label for="precio" class="label">Precio</mat-label>
+                <input matInput type="number" class="form-control" placeholder="Precio" aria-label="Precio">
+              </mat-form-field>
             </div>
             <div class="col">
-              <label for="cantidad">Cantidad</label>
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="col">
-              <label for="codigoDeBarra" class="label">Codigo de barras</label>
-              <input type="text" class="form-control" placeholder="codifo de barras" aria-label="codigo de barras">
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="col">
-              <label for="fecha" class="label">Fecha</label>
-              <input type="date" class="form-control">
-            </div>
-            <div class="col">
-              <label for="descuento" class="label">Descuento</label>
-              <input type="number" class="form-control" placeholder="Descuento" aria-label="descuento">
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="col">
-              <div class="col">
-                <label for="precio" class="label">Precio</label>
-                <input type="number" class="form-control" placeholder="Precio" aria-label="Precio">
-              </div>
-            </div>
-            <div class="col">
-              <div class="col">
-                <label for="total" class="label">Total</label>
-                <input type="number" class="form-control" placeholder="total" aria-label="total">
-              </div>
+              <mat-form-field class="col">
+                <mat-label for="total" class="label">Total</mat-label>
+                <input matInput type="number" class="form-control" placeholder="total" aria-label="total">
+              </mat-form-field>
             </div>
           </div>
 
