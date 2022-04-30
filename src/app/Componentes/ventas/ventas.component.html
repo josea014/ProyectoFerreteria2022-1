@@ -1,85 +1,87 @@
 <div class="container">
-  <h1>Ventas</h1>
   <div class="row">
-    <div class="col-10 mt-5">
-      <form action="">
+    <div class="card col-10 mt-5 m-auto">
+      <h1 class="card-header">Ventas</h1>
+      <div class="card-body">
+        <form action="">
 
 
-        <div class="row g-3">
-          <div class="col form-group">
-            <label for="emrpesa" class="label">Empresa</label>
-            <input type="text" class="form-control" placeholder="empresa" aria-label="Empresa">
-          </div>
-          <div class="col">
-            <label for="empresa" class="label">Factura</label>
-          </div>
-        </div>
-
-        <div class="row g-3">
-          <div class="col">
-            <label for="nombreProduto" class="label">Nombre del producto</label>
-            <input type="text" class="form-control" placeholder="Nombre del producto" aria-label="First name">
-          </div>
-          <div class="col">
-            <label for="datosDelCliente" class="label">Datos del cliente</label>
-            <input type="text" class="form-control" placeholder="nombre" aria-label="datos del cliente">
-          </div>
-        </div>
-        <div class="row g-3">
-          <div class="col">
-            <label for="descripcion">Descripcion</label>
-            <textarea id="descripcion" name="descripcion" row="2" class="form-control"></textarea>
-          </div>
-          <div class="col">
-            <label for="cantidad" >Cantidad</label>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-        <div class="row g-3">
-          <div class="col">
-            <label for="codigoDeBarra" class="label">Codigo de barras</label>
-            <input type="text" class="form-control" placeholder="codifo de barras" aria-label="codigo de barras">
-          </div>
-        </div>
-        <div class="row g-3">
-          <div class="col">
-            <label for="fecha" class="label">Fecha</label>
-            <input type="date" class="form-control"  >
-          </div>
-          <div class="col">
-            <label for="descuento" class="label">Descuento</label>
-            <input type="number" class="form-control" placeholder="Descuento" aria-label="descuento">
-          </div>
-        </div>
-        <div class="row g-3">
-          <div class="col">
+          <div class="row g-3">
+            <div class="col form-group">
+              <label for="emrpesa" class="label">Empresa</label>
+              <input type="text" class="form-control" placeholder="empresa" aria-label="Empresa">
+            </div>
             <div class="col">
-              <label for="precio" class="label">Precio</label>
-              <input type="number" class="form-control" placeholder="Precio" aria-label="Precio">
+              <label for="empresa" class="label">Factura</label>
+              <input type="text" class="form-control" [disabled] ="disabled" aria-label="Empresa">
             </div>
           </div>
-          <div class="col">
+
+          <div class="row g-3">
             <div class="col">
-              <label for="total" class="label">Total</label>
-              <input type="number" class="form-control" placeholder="total" aria-label="total">
+              <label for="nombreProduto" class="label">Nombre del producto</label>
+              <input type="text" class="form-control" placeholder="Nombre del producto" aria-label="First name">
+            </div>
+            <div class="col">
+              <label for="datosDelCliente" class="label">Datos del cliente</label>
+              <input type="text" class="form-control" placeholder="nombre" aria-label="datos del cliente">
             </div>
           </div>
-        </div>
+          <div class="row g-3">
+            <div class="col">
+              <label for="descripcion">Descripcion</label>
+              <textarea id="descripcion" name="descripcion" row="2" class="form-control"></textarea>
+            </div>
+            <div class="col">
+              <label for="cantidad">Cantidad</label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col">
+              <label for="codigoDeBarra" class="label">Codigo de barras</label>
+              <input type="text" class="form-control" placeholder="codifo de barras" aria-label="codigo de barras">
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col">
+              <label for="fecha" class="label">Fecha</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="col">
+              <label for="descuento" class="label">Descuento</label>
+              <input type="number" class="form-control" placeholder="Descuento" aria-label="descuento">
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col">
+              <div class="col">
+                <label for="precio" class="label">Precio</label>
+                <input type="number" class="form-control" placeholder="Precio" aria-label="Precio">
+              </div>
+            </div>
+            <div class="col">
+              <div class="col">
+                <label for="total" class="label">Total</label>
+                <input type="number" class="form-control" placeholder="total" aria-label="total">
+              </div>
+            </div>
+          </div>
 
 
 
 
-<div class="d-grid  col-5 mx-auto">
-  <button type="button" class="btn btn-primary m-2 center">Comprar</button>
-</div>
+          <div class="d-grid  col-3 mx-auto">
+            <button mat-raised-button color="primary" type="button" class=" m-2 center">Comprar</button>
+          </div>
 
-      </form>
-
+        </form>
+      </div>
     </div>
 
   </div>

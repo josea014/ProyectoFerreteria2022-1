@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VentasComponent implements OnInit {
 
-  constructor() { }
-
+  disabled: boolean;
+  constructor() {
+    this.disabled = true;
+  }
   ngOnInit(): void {
   }
 
