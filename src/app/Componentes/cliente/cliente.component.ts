@@ -1,3 +1,4 @@
+import { FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteComponent implements OnInit {
 
-  constructor() { }
+
+  formFields;
+  constructor(private formBuilder: FormBuilder) {
+    this.formFields = this.formBuilder.group({
+      numeroDocumento: '',
+      nombre: '',
+      telefono: '',
+      celular: '',
+      municipio: '',
+      departamento: '',
+      direccion: ''
+
+    });
+  }
 
   ngOnInit(): void {
   }
 
+  onSubmit(data:object): void {
+    console.log(data);
+    this.formFields.reset();
+  }
 }

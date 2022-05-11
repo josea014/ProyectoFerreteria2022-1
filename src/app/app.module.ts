@@ -24,6 +24,7 @@ import { VentasComponent } from './Componentes/ventas/ventas.component';
 import { ClienteComponent } from './Componentes/cliente/cliente.component';
 import { ConsultaComponent } from './Componentes/consulta/consulta.component';
 import {MatTableModule} from '@angular/material/table';
+import { LoginComponent } from './Componentes/pages/login/login.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {MatTableModule} from '@angular/material/table';
     ProductoComponent,
     VentasComponent,
     ClienteComponent,
-    ConsultaComponent
+    ConsultaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
