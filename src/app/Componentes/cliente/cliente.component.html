@@ -6,62 +6,61 @@
 
       </div>
       <div class="card-body">
-        <div class="row g-3">
-          <mat-form-field class="col form-group">
+        <form [formGroup]="formFields" (ngSubmit)="onSubmit(formFields.value)">
+          <div class="row g-3">
+            <mat-form-field class="col form-group">
 
-            <mat-label>Numero del documento</mat-label>
-            <input matInput type="text" class="form-control" placeholder="Numero del documento">
-          </mat-form-field>
-          <mat-form-field class="col form-group">
+              <mat-label>Numero del documento</mat-label>
+              <input matInput type="text" formControlName="numeroDocumento" class="form-control" placeholder="Numero del documento">
+            </mat-form-field>
+            <mat-form-field class="col form-group">
 
-            <mat-label>nombre</mat-label>
-            <input matInput type="text" class="form-control" placeholder="Nombre Completo">
+              <mat-label>nombre</mat-label>
+              <input matInput type="text" formControlName="nombre" class="form-control" placeholder="Nombre Completo">
 
-          </mat-form-field>
-        </div>
-
-
-        <div class="row g-3">
-          <mat-form-field class="col form-group">
-            <mat-label>Telefono</mat-label>
-            <input matInput type="tel" class="form-control" placeholder="Telefono#">
-          </mat-form-field>
-          <mat-form-field class="col form-group">
-            <mat-label>Celular</mat-label>
-            <input matInput type="tel" class="form-control" placeholder="Numero Celular">
-
-          </mat-form-field>
-        </div>
-
-        <div class="row g-3 mt-2">
-          <mat-form-field class="col form-group">
-            <mat-label>Nombre del Municipio</mat-label>
-            <input type="text" matInput class="form-control" placeholder="Municipio">
-
-          </mat-form-field>
-          <mat-form-field class="col form-group">
+            </mat-form-field>
+          </div>
 
 
-            <mat-label>Direccion</mat-label>
-            <input matInput type="text" class="form-control" placeholder="Nombre ">
+          <div class="row g-3">
+            <mat-form-field class="col form-group">
+              <mat-label>Telefono</mat-label>
+              <input matInput type="tel" formControlName="telefono" class="form-control" placeholder="Telefono#">
+            </mat-form-field>
+            <mat-form-field class="col form-group">
+              <mat-label>Celular</mat-label>
+              <input matInput type="tel" class="form-control" formControlName="celular" placeholder="Numero Celular">
 
-          </mat-form-field>
-        </div>
+            </mat-form-field>
+          </div>
 
-        <div class="row g-3 mt-2">
-          <mat-form-field class="col-4 form-group">
-            <mat-label>Nombre del Departamento</mat-label>
-            <input matInput type="text" class="form-control" placeholder="Nombre del Departamento">
+          <div class="row g-3 mt-2">
+            <mat-form-field class="col form-group">
+              <mat-label>Nombre del Municipio</mat-label>
+              <input type="text" matInput class="form-control" formControlName="municipio" placeholder="Municipio">
 
-          </mat-form-field>
-        </div>
+            </mat-form-field>
+            <mat-form-field class="col form-group">
+              <mat-label>Direccion</mat-label>
+              <input matInput type="text" class="form-control" formControlName="direccion" placeholder="Nombre ">
 
-        <div class="d-grid col-3 mx-auto">
+            </mat-form-field>
+          </div>
 
-          <button mat-raised-button color="primary" class=" mt-3">Registrar</button>
-        </div>
+          <div class="row g-3 mt-2">
+            <mat-form-field class="col-4 form-group">
+              <mat-label>Nombre del Departamento</mat-label>
+              <input matInput type="text" class="form-control" formControlName="departamento" placeholder="Nombre del Departamento">
 
+            </mat-form-field>
+          </div>
 
+          <div class="d-grid col-3 mx-auto">
+
+            <button mat-raised-button color="primary" type="submit" class=" mt-3">Registrar</button>
+          </div>
+
+        </form>
       </div>
     </div>
   </div>
