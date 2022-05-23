@@ -25,6 +25,7 @@ import { ClienteComponent } from './Componentes/cliente/cliente.component';
 import { ConsultaComponent } from './Componentes/consulta/consulta.component';
 import {MatTableModule} from '@angular/material/table';
 import { LoginComponent } from './Componentes/login/login.component';
+import { RegistrarComponent } from './Componentes/registrar/registrar.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { LoginComponent } from './Componentes/login/login.component';
     VentasComponent,
     ClienteComponent,
     ConsultaComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrarComponent
   ],
   imports: [
     BrowserModule,

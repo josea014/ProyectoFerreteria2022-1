@@ -1,0 +1,71 @@
+<div class="container">
+
+    <div class="row">
+      <div class=" card col-10 mt-5 m-auto">
+        <h1 class="card-header">REGISTRAR</h1>
+        <div class="card-body">  
+          <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">  
+            <div class="row g-3">
+              <mat-form-field class="col form-group">  
+                <mat-label for="Nombre" class="label">Nombre</mat-label>
+                <input matInput placeholder="nombre" formControlName="nombre">
+              </mat-form-field>
+              <mat-form-field class="col">
+                <mat-label for="nit" class="label">Nit</mat-label>
+                <input matInput type="number" placeholder="99958421" aria-label="nit"
+                  formControlName="nit">
+              </mat-form-field>
+            </div>  
+            <div class="row g-3">
+              <mat-form-field class="col-5">
+                <mat-label for="usuario" class="label">Usuario</mat-label>
+                <input matInput type="text" placeholder="pepito" formControlName="usuario">
+              </mat-form-field>
+              <mat-form-field class="col">
+                <mat-label for="contraseña" class="label">Contraseña</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="contrasena">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+            <div class="row g-3">
+              <mat-form-field class="col">
+                <mat-label for="telefono">Teléfono </mat-label>
+                <input matInput type="tel" placeholder="0180003517810" formControlName="telefono">
+              </mat-form-field>
+              <mat-form-field class="col">
+                <mat-label for="celular">Celular </mat-label>
+                <input matInput type="tel" class="form-control" placeholder="--- --- ----" formControlName="celular">
+              </mat-form-field>
+            </div>
+           
+  
+            <div class="row g-3">
+  
+              <mat-form-field class="col">
+                <mat-label for="direccion" class="label">Dirección</mat-label>
+                <input matInput type="text" placeholder="calle 123 # 26" aria-label="direccion"
+                  formControlName="direccion">
+  
+              </mat-form-field>
+              <mat-form-field class="col">
+  
+                <mat-label for="correo" class="label">Correo</mat-label>
+                <input matInput type="text" aria-label="correo" formControlName="correo">
+  
+              </mat-form-field>
+            </div>
+  
+            <div class="d-grid  col-3 mx-auto">
+              <button type="submit" mat-raised-button color="primary" class="m-2 center">Guardar</button>
+            </div>
+  
+          </form>
+        </div>
+  
+      </div>
+  
+    </div>
+  </div>
