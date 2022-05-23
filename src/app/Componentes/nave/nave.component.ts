@@ -35,6 +35,9 @@ export class NaveComponent implements OnInit {
   abrirProducto(){
     this.router.navigate(['producto']);
   }
+ abrirLogin(){
+   this.router.navigate(['login']);
+ }
 
 }
 
