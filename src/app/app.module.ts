@@ -52,7 +52,7 @@ import { LoginComponent } from './Componentes/login/login.component';
     MatNativeDateModule,
     BrowserAnimationsModule,
     BrowserModule,
-    FormsModule,
+
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,

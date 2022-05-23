@@ -4,4 +4,5 @@ node_modules
 =======
 .angular/
 node_modules/
+.idea/
 >>>>>>> 7c4ae7440cb0831690f3333519201bd19da679a6
