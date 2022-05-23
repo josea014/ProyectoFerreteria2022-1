@@ -39,43 +39,43 @@
             <mat-form-field class="col">
               <mat-label for="cantidad">Cantidad</mat-label>
               <mat-select aria-label="Default select example " formControlName="cantidad">
-                <mat-option *ngFor="let cantidad of cantidades"  [value]="cantidad">
-                  {{cantidad}}</mat-option>
+                <textarea matInput id="descripcion" formControlName="descripcion" name="descripcion" row="2"
+                class="form-control"></textarea>
+                
 
               </mat-select>
             </mat-form-field>
           </div>
-          <div class="row g-3">
-            <mat-form-field class="col">
-              <mat-label for="codigoDeBarra" class="label">Codigo de barras</mat-label>
-              <input matInput type="text" formControlName="codigoBarra" class="form-control"
-                placeholder="codifo de barras" aria-label="codigo de barras">
-            </mat-form-field>
-          </div>
+          
           <div class="row g-3">
             <mat-form-field class="col">
               <mat-label for="fecha" class="label">Fecha</mat-label>
               <input matInput type="date" class="form-control" formControlName="fecha">
             </mat-form-field>
+            
             <mat-form-field class="col">
-              <mat-label for="descuento" class="label">Descuento</mat-label>
-              <input matInput type="number" class="form-control" formControlName="descuento" placeholder="Descuento"
-                aria-label="descuento">
+              <mat-label for="Descuento" class="label">Descuento</mat-label>
+              <input matInput type="text" formControlName="factura" class="form-control" [disabled]="disabled"
+                aria-label="Descuento">
             </mat-form-field>
+
           </div>
           <div class="row g-3">
             <div class="col">
+              
               <mat-form-field class="col">
-                <mat-label for="precio" class="label">Precio</mat-label>
-                <input matInput type="number" class="form-control" formControlName="precio" placeholder="Precio" aria-label="Precio">
+                <mat-label for="Factura" class="label">Factura</mat-label>
+                <input matInput type="text" formControlName="factura" class="form-control" [disabled]="disabled"
+                  aria-label="Factura">
               </mat-form-field>
-            </div>
-            <div class="col">
+
               <mat-form-field class="col">
                 <mat-label for="total" class="label">Total</mat-label>
                 <input matInput type="number" formControlName="total" class="form-control" placeholder="total" aria-label="total">
               </mat-form-field>
+
             </div>
+            
           </div>
 
 
