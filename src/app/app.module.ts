@@ -54,7 +54,7 @@ import { RegistrarComponent } from './Componentes/registrar/registrar.component'
     MatNativeDateModule,
     BrowserAnimationsModule,
     BrowserModule,
-    FormsModule,
+
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,

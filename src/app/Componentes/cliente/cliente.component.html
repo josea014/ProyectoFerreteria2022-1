@@ -66,17 +66,16 @@
 
     </div>
 
-  
+
   </div>
 </div>
 
 
-  <!--
     <div *ngIf="dataSource" class="col-10 mt-5 m-auto">
 
-    <table mat-table c [dataSource]="dataSource" class="mat-elevation-z8 table">
+    <table mat-table  [dataSource]="dataSource" class="mat-elevation-z8 table">
 
-         
+
 
         <ng-container matColumnDef="codigo">
           <th mat-header-cell *matHeaderCellDef>{{ headerTabla[0]}}</th>
@@ -90,31 +89,29 @@
 
       <ng-container matColumnDef="cedula">
           <th mat-header-cell *matHeaderCellDef> {{ headerTabla[2]}} </th>
-          <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.cedula}} </td>
       </ng-container>
 
-    
-      <ng-container matColumnDef="Celular">
+
+      <ng-container matColumnDef="celular">
           <th mat-header-cell *matHeaderCellDef> {{ headerTabla[3]}} </th>
-          <td mat-cell *matCellDef="let element"> {{element.material}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.celular}} </td>
       </ng-container>
 
-      
-      <ng-container matColumnDef="Direccion">
+
+      <ng-container matColumnDef="direccion">
           <th mat-header-cell *matHeaderCellDef> {{ headerTabla[4]}} </th>
-          <td mat-cell *matCellDef="let element"> {{element.dimensiones}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
       </ng-container>
-      <ng-container matColumnDef="stock">
+     <!-- <ng-container matColumnDef="stock">
           <th mat-header-cell *matHeaderCellDef> {{ headerTabla[5]}} </th>
           <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
       </ng-container>
-
+-->
       <tr mat-header-row *matHeaderRowDef="headerTabla"></tr>
       <tr mat-row *matRowDef="let row; columns: headerTabla;"></tr>
   </table>
 </div>
 
-  -->
 
-    
-  
+
