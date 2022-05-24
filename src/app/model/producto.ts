@@ -9,7 +9,7 @@ export interface Producto {
 
 }
 export interface Cliente {
-    codigo: number,
+    
     nombre: string,
     cedula: number,
     celular: number,

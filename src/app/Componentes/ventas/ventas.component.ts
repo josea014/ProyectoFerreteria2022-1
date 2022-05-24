@@ -18,12 +18,20 @@ export class VentasComponent implements OnInit {
         this.headerTabla = ['factura', 'nombre', 'cantidad', 'precio', 'descuento', 'total'];
         this.dataSource = [{
             factura: 45,
-            nombre: 'first',
-            cantidad: 11,
-            precio: 18200,
-            descuento: '5',
-            total: 18200 * 11
+            nombre: 'Tornillos',
+            cantidad: 12,
+            precio: 500,
+            descuento: '0',
+            total: 500 * 12
 
+        },
+        {factura: 45,
+            nombre: 'Lampara',
+            cantidad: 6,
+            precio: 8300,
+            descuento: '0',
+            total: 8300* 6
+            
         }
 
         ];

@@ -13,9 +13,12 @@ export class ClienteComponent implements OnInit {
   dataSource: Cliente[] | null= null;
 
   constructor() { 
-    this.headerTabla = ['codigo','nombre', 'cedula', 'celular', 'direccion'];
+    this.headerTabla = ['nombre', 'cedula', 'celular', 'direccion'];
   this.dataSource = [
-    { codigo: 454, nombre: 'jose', cedula: 13000, celular: 4000, direccion: '20cm'}
+    {  nombre: 'Jose', cedula: 3876546, celular: 3009878987, direccion: 'calle 34 #45-6'},
+    {  nombre: 'Juan', cedula: 4567890, celular: 3006543210,direccion: 'calle 36 #45-9'},
+    {  nombre: 'Lucas', cedula: 12345634, celular: 30123456789,direccion: 'calle 31 #11-6'},
+    {  nombre: 'Simon', cedula: 3567090, celular: 3028908877,direccion: 'calle 35 manzana #5-1'}
 
   ]}
   
