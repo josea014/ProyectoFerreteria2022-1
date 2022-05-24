@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validator, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
+import {AuthService} from "../../services/auth.service";
+import {Error} from "../../model/producto";
 
 @Component({
     selector: 'app-login',
@@ -11,8 +13,9 @@ export class LoginComponent implements OnInit {
 
     formFields: any;
     anio: number;
+    error!: Error;
 
-    constructor(private router: Router) {
+    constructor(private router: Router, private auth: AuthService) {
         this.formFields = new FormGroup({
             user: new FormControl('', [Validators.required]),
             password: new FormControl('', [Validators.required])
@@ -24,12 +27,27 @@ export class LoginComponent implements OnInit {
     }
 
     onSubmit(data: FormGroup) {
-        console.log("data ", data);
+
         if (!data.valid) {
             return
         }
-        console.log(data.get('user')?.value);
-        this.router.navigate(['start']);
+        const usuario = {
+            user: data.get('user')?.value,
+            password: data.get('password')?.value,
+
+        }
+
+        const respuesta = this.auth.login(usuario);
+
+        if (respuesta) {
+            localStorage.setItem('idUser', respuesta.id + "");
+            this.router.navigate(['start']);
+        }
+        this.error = {
+            tipo: "ERROR",
+            descripcion: "USUARIO O CONTRASEÑA INCORRECTOS"
+        }
+
     }
 
     get user() {

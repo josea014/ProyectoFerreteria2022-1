@@ -1,5 +1,5 @@
 <main class="p-3 mb-2 text-dark fst-italic text-center">
-    <div class="container  ">
+    <div class="container">
         <div class="row">
             <div class="card  mt-5  col-8 m-auto ">
                 <h1 class="card-header">BIENVENIDO</h1>
@@ -13,25 +13,31 @@
                         <div class="form-floating">
 
                             <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
-                                   formControlName="user" [class.is-invalid]="user?.invalid && (user.dirty || user.touched)">
+                                   formControlName="user" [class.is-invalid]="user?.invalid && (user?.dirty || user?.touched)">
                             <label for="floatingInput">Email </label>
                         </div>
                         <br>
                         <div class="form-floating">
                             <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
-                                   formControlName="password" [class.is-invalid]="password?.invalid && (password.dirty || password.touched)">
+                                   formControlName="password" [class.is-invalid]="password?.invalid && (password?.dirty || password?.touched)">
                             <label for="floatingPassword">Password</label>
                         </div>
                         <div class="checkbox mt-2 mb-3 col-2">
-                           
-                        </div> 
+
+                        </div>
                         <!--                        <a class="w-10 btn btn-outline-primary" type="submit" href="inicio.html">Ingresar</a>-->
                         <button mat-raised-button color="primary">Ingresar</button>
-                        <button mat-raised-button color="primary">Registrar</button>
-                        
+
+                        <a mat-raised-button color="primary" class="ms-3" [routerLink]="['/registrar']" >Registrar</a>
+
                         <p class="mt-5 mb-3 text-muted">&copy; {{anio}}</p>
                     </form>
                 </div>
+
+            </div>
+            <div class="alert-danger mt-2 col-8 m-auto" *ngIf="error">
+                {{error.tipo}}
+                <p>{{error.descripcion}}</p>
             </div>
         </div>
     </div>
