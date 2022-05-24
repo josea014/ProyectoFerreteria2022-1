@@ -9,10 +9,12 @@ import {ClienteComponent} from './Componentes/cliente/cliente.component';
 import {LoginComponent} from "./Componentes/login/login.component";
 import {NaveComponent} from "./Componentes/nave/nave.component";
 import {NavbarComponent} from "./Componentes/navbar/navbar.component";
+import {RegistrarComponent} from "./Componentes/registrar/registrar.component";
+import {AuthGuard} from "./guard/auth.guard";
 
 const ROUTES: Routes = [
     {
-        path: 'start', component: NaveComponent, children:
+        path: 'start', component: NaveComponent, canActivate:[AuthGuard], children:
             [
                 {path: 'consulta', component: ConsultaComponent},
                 {path: 'inicio', component: InicioComponent},
@@ -21,17 +23,17 @@ const ROUTES: Routes = [
                 {path: 'ventas', component: VentasComponent},
                 {path: 'agregar-cliente', component: ClienteComponent},
                 {path: '**', pathMatch: 'full', redirectTo: 'inicio'}
-                
+
             ]
     },
 
     {path: 'login', component: LoginComponent},
 
-    {path: '**', pathMatch: 'full', redirectTo: 'login'},
+    {path: 'registrar', component: RegistrarComponent},
 
-    {path: 'registrar', component: LoginComponent},
+    {path: '**', pathMatch: 'full', redirectTo: '/login'},
 
-    {path: '**', pathMatch: 'full', redirectTo: 'registrar'}
+
 
 ];
 

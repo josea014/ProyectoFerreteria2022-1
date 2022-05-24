@@ -16,7 +16,24 @@ export interface Cliente {
     direccion: string
 
 }
-export interface login{
+export interface Login{
     user: string,
     password: string
+}
+
+export interface Organizacion{
+    id: number,
+    nombre: string,
+    nit: string,
+    telefono:number,
+    celular: number,
+    usuario:string,
+    contrasena:string
+    correo?: string
+    direccion:string
+}
+
+export  interface  Error{
+    tipo:string,
+    descripcion: string
 }
