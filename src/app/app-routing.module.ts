@@ -21,12 +21,17 @@ const ROUTES: Routes = [
                 {path: 'ventas', component: VentasComponent},
                 {path: 'agregar-cliente', component: ClienteComponent},
                 {path: '**', pathMatch: 'full', redirectTo: 'inicio'}
+                
             ]
     },
 
     {path: 'login', component: LoginComponent},
 
-    {path: '**', pathMatch: 'full', redirectTo: 'login'}
+    {path: '**', pathMatch: 'full', redirectTo: 'login'},
+
+    {path: 'registrar', component: LoginComponent},
+
+    {path: '**', pathMatch: 'full', redirectTo: 'registrar'}
 
 ];
 

@@ -14,7 +14,9 @@ export interface Cliente {
     cedula: number,
     celular: number,
     direccion: string
-   
 
-
+}
+export interface login{
+    user: string,
+    password: string
 }
